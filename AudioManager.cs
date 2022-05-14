@@ -6,6 +6,7 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     //These scripts were made by looking up at Brackeys old and new videos and has my slight tweaks
+    //Took Random range from Thomas Brush
 
     public Sound[] sounds;
 
