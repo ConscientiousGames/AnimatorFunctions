@@ -32,7 +32,7 @@ public class AudioManager : MonoBehaviour
             //The audiomanager object handling all audio sources
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.volume = s.SetRandomVolume();
-            s.source.clip = s.clip;
+            s.source.clip = s.clips[UnityEngine.Random.Range(0,s.clips.Length)];
             s.source.pitch = s.SetRandomPitch();
             s.source.loop = s.loop;
         }
@@ -41,6 +41,12 @@ public class AudioManager : MonoBehaviour
     //Call this function from animator by keeepin it on player, or you can call it via script as audiomager is static (Just like Game manger or player)
     public void Play(string name)
     {
+        foreach(Sound s1 in sounds)
+        {
+            s1.source.volume = s1.SetRandomVolume();
+            s1.source.clip = s1.clips[UnityEngine.Random.Range(0, s1.clips.Length)];
+            s1.source.pitch = s1.SetRandomPitch();
+        }
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null) Debug.LogError("Sound: " + s.name + "not found!");
         s.source.Play();
