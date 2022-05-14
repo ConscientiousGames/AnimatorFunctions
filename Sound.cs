@@ -6,11 +6,12 @@ using UnityEngine;
 public class Sound
 {
     //These scripts were made by looking up at Brackeys old and new videos and has my slight tweaks
+    //Many different clips for one sound referenced from Thomas Brush
 
     /*This boy stores all the values and have randomising functions in it */
 
     public string name;
-    public AudioClip clip;
+    public AudioClip[] clips;
     [Range(0, 1f)]
     public float volume;
     [Range(0.1f, 3f)]
