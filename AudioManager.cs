@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    //These scripts were made by looking up at Brackeys old and new videos and has my slight tweaks
-    //Took Random range from Thomas Brush
+    //These scripts were made by looking up at Brackeys old and new videos and contains slight tweaks in them
 
     public Sound[] sounds;
 
@@ -47,6 +46,9 @@ public class AudioManager : MonoBehaviour
             s1.source.volume = s1.SetRandomVolume();
             s1.source.clip = s1.clips[UnityEngine.Random.Range(0, s1.clips.Length)];
             s1.source.pitch = s1.SetRandomPitch();
+
+            //If u wanna tweak loop during play
+            //s1.source.loop = s1.loop;
         }
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null) Debug.LogError("Sound: " + s.name + "not found!");
@@ -55,6 +57,7 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
+        
         DontDestroyOnLoad(gameObject);
     }
 
