@@ -5,10 +5,9 @@ using UnityEngine;
 [System.Serializable]
 public class Sound
 {
-    //These scripts were made by looking up at Brackeys old and new videos and has my slight tweaks
-    //Many different clips for one sound referenced from Thomas Brush
+    //These scripts were made by looking up at Brackeys old and new videos and contains slight tweaks in them
 
-    /*This boy stores all the values and have randomising functions in it */
+    //This boy stores all the values and have randomising functions in it
 
     public string name;
     public AudioClip[] clips;
