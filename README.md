@@ -1,4 +1,4 @@
-# AudioManager
+AnimatorFunctions (Contains audio mangager and other stuff)
 AudioManager tweaks by looking up at Brackeys videos.
 
 Many different clips for one sound referenced from Thomas Brush.
