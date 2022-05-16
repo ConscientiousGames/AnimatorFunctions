@@ -13,6 +13,8 @@ Step2 : Now Just Add audio and particles using this neat arrangement.
 
 Step3 : Copy paste string names on events in animator.
 
+Steo3b : Or use it in scripts as shown in the Image, AnimatorFunctions.Instance.PlaySound(" [string name] ");, AnimatorFunctions.Instance.EmitParticles(" [string name]");
+
 Images for reference here at https://imgur.com/a/MA9m95y
 
 GL!
