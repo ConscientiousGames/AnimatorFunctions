@@ -7,14 +7,6 @@ using System;
 
 public class GameManager : MonoBehaviour
 {
-    
-
-    //References
-    [Header("References")]
-    public Text coinText;
-    public Image healthBar;
-    
-
     //Singelton Instantiation
     private static GameManager instance;
     public static GameManager Instance
@@ -56,12 +48,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(gameObject);
-        
-
-        //References null check
-        if (!coinText) Debug.Log("Missing Reference of coinText");
-        if (!healthBar) Debug.Log("Missing Reference of healthBar");
-        
     }
 
     
