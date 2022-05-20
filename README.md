@@ -1,3 +1,5 @@
+NOTE - DM me on discord CONSCIENTIOUS GAMES#1113 to ask for modified version of AudioTrigger.cs (Only for students of Full Time game Dev)
+
 AnimatorFunctions (Contains audio mangager and other stuff)
 AudioManager tweaks by looking up at Brackeys videos.
 
