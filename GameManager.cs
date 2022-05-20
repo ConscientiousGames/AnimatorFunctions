@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
 
             //The audiomanager object handling all audio sources
             s.source = gameObject.AddComponent<AudioSource>();
-
+            s.source.clip = s.clips[UnityEngine.Random.Range(0, s.clips.Length)];
             s.source.loop = s.loop;
         }
     }
@@ -82,5 +82,15 @@ public class GameManager : MonoBehaviour
         Particle p = Array.Find(particles, particle => particle.name == name);
         if (p == null) Debug.LogError("Particle: " + name + " not found!");
         p.particleSystem.Emit(p.emitAmount);
+    }
+    
+    public Sound SoundObjectReference(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogError("Sound: " + name + " not found!");
+        }
+        return s;
     }
 }
